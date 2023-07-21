@@ -1,2 +1,2 @@
-# jupyter_flowise_proxy
-jupyter server proxy for Flowise AI (flowiseai.com)
+# jupyter_langflow_proxy
+jupyter server proxy for langflow AI (langflowai.com)
