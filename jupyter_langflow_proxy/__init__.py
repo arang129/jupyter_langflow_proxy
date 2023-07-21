@@ -1,5 +1,5 @@
 """
-Return config on servers to start for h2o-llm-studio
+Return config on servers to start for langflow
 
 See https://jupyter-server-proxy.readthedocs.io/en/latest/server-process.html
 for more information.
