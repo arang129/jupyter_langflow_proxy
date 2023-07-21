@@ -9,25 +9,25 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 
 setuptools.setup(
-    name="jupyter-flowise-proxy",
+    name="jupyter-langflow-proxy",
     version="0.2.0",
-    url="https://github.com/bijucyborg/jupyter_flowise_proxy",
+    url="https://github.com/bijucyborg/jupyter_langflow_proxy",
     author="DataSiens",
     description="info@datasiens.ai",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
-    keywords=["jupyter", "flowise", "jupyterhub", "jupyter-server-proxy"],
+    keywords=["jupyter", "langflow", "jupyterhub", "jupyter-server-proxy"],
     classifiers=["Framework :: Jupyter"],
     install_requires=[
         "jupyter-server-proxy>=1.5.0",
     ],
     entry_points={
         "jupyter_serverproxy_servers": [
-            "flowise = jupyter_flowise_proxy:setup_flowise",
+            "langflow = jupyter_langflow_proxy:setup_langflow",
         ]
     },
     package_data={
-        "jupyter_flowise_proxy": ["icons/flowise.svg"],
+        "jupyter_langflow_proxy": ["icons/langflow.svg"],
     },
 )
