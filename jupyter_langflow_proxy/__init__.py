@@ -1,5 +1,5 @@
 """
-Return config on servers to start for langflow.
+Return config on servers to start for h2o-llm-studio
 
 See https://jupyter-server-proxy.readthedocs.io/en/latest/server-process.html
 for more information.
@@ -7,13 +7,10 @@ for more information.
 import os
 import shutil
 import logging
-from urllib.parse import urlparse, urlunparse
-import requests
-from urllib.parse import urlparse, urlunparse
+
 
 logger = logging.getLogger(__name__)
-logger.setLevel("DEBUG")
-
+logger.setLevel("INFO")
 
 
 def setup_langflow():
@@ -28,20 +25,18 @@ def setup_langflow():
 
     # Make sure executable is in $PATH
     def _get_langflow_command(port):
-        executable = "langflow"
+        executable = "make"
         if not shutil.which(executable):
-            raise FileNotFoundError("Can not find npx executable in $PATH")
+            raise FileNotFoundError("Can not find make executable in $PATH")
         return ["langflow", "--port", f"{port}"]
-    
 
     return {
-        'command': _get_langflow_command,
-        'timeout': 20,
-        'launcher_entry': {
-            'title': 'langflow',
-            'icon_path': _get_icon_path()
+        "command": _get_langflow_command,
+        "timeout": 20,
+        "launcher_entry": {
+            "title": "langflow",
+            "icon_path": _get_icon_path()
         },
-        'absolute_url': True,
-        'new_browser_tab': True,
-        },
-    
+        "absolute_url": True,
+        "new_browser_tab": True,
+    }

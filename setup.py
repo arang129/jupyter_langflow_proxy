@@ -9,25 +9,25 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 
 setuptools.setup(
-    name="jupyter-langflow-proxy",
+    name="jupyter-h2o-llm-studio-proxy",
     version="0.2.0",
-    url="https://github.com/bijucyborg/jupyter_langflow_proxy",
+    url="https://github.com/bijucyborg/jupyter_h2o-llm-studio_proxy",
     author="DataSiens",
     description="info@datasiens.ai",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
-    keywords=["jupyter", "langflow", "jupyterhub", "jupyter-server-proxy"],
+    keywords=["jupyter", "h2o-llm-studio", "jupyterhub", "jupyter-server-proxy"],
     classifiers=["Framework :: Jupyter"],
     install_requires=[
         "jupyter-server-proxy>=1.5.0",
     ],
     entry_points={
         "jupyter_serverproxy_servers": [
-            "langflow = jupyter_langflow_proxy:setup_langflow",
+            "langflow = jupyter_h2o_llm_studio_proxy:setup_langflow",
         ]
     },
     package_data={
-        "jupyter_langflow_proxy": ["icons/langflow.svg"],
+        "jupyter_h2o_llm_studio_proxy": ["icons/logo.svg"],
     },
 )
