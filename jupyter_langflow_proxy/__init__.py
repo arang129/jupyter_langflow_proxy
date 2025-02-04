@@ -29,7 +29,7 @@ def setup_langflow():
         if not shutil.which(executable):
             raise FileNotFoundError("Can not find make executable in $PATH")
         #return ["langflow", "--port", f"{port}"]
-        return ["/home/jupyter-opc/.conda/envs/langflow_venv/bin/python", "-m", "langflow", "run", "--host", "0.0.0.0", "--port", f"{port}"]
+        return ["/home/jupyter-opc/.conda/envs/langflow_venv/bin/python", "-m", "langflow", "run", "--host", "127.0.0.1", "--port", f"{port}"]
 
     return {
         "command": _get_langflow_command,
